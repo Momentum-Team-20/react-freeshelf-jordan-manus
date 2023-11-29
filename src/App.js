@@ -9,7 +9,7 @@ function App() {
     <div>
       <h1>Freeshelf</h1>
       {/* Use bookData to show books on the page*/}
-      <section className='section is-flex-wrap-wrap book-list'>
+      <section className='section is-flex-wrap-wrap my-2 book-list'>
         {bookData.map((book) => (
           <Display
             title={book.title}
@@ -41,7 +41,7 @@ function Display(props) {
 
 
   return (
-    <div className='columns'>
+    <div className='columns display'>
       <div className='column is-two-thirds'>
         <h2 className='title is-4 has-text-weight-bold'>{props.title}</h2>
         <p className='author subtitle is-italic has-text-weight-medium'>{props.author}</p>
@@ -64,10 +64,11 @@ function Display(props) {
           </div>)}
       </div>
 
-      <img className='cover-art image column is-4by3 is-flex pt-1' src={props.image ? props.image : fallback_image} alt='book cover' onError={addDefaultSrc} />
+      <img className='cover-art image column is-4by3 is-flex pt-1 my-3' src={props.image ? props.image : fallback_image} alt='book cover' onError={addDefaultSrc} />
     </div >
   )
 }
+
 
 
 
