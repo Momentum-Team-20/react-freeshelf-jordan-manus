@@ -28,6 +28,8 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/prop-types": "off",
+        "react/jsx-key": "off",
     },
 
 }

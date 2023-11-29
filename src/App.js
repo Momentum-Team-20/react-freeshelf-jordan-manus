@@ -37,7 +37,8 @@ function Display(props) {
     <div>
       <h2 className=''>{props.title}</h2>
       <p className='author'>{props.author}</p>
-      <p className='short-desc'>{book.shortDescription}</p>
+      <p className='short-desc'>{props.shortDescription}</p>
+      <img className='image cover-art' src={props.image} />
       <button className='button' onClick={handleClick}>{expanded ? 'show less' : 'show more'}</button>
 
       {/* take div out if spacing is off */}
