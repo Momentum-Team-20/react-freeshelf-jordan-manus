@@ -34,7 +34,22 @@ function Display(props) {
     setExpanded(!expanded)
   }
   return (
-    <h2 className=''>{props.title}</h2>
+    <div>
+      <h2 className=''>{props.title}</h2>
+      <p className='author'>{props.author}</p>
+      <p className='short-desc'>{book.shortDescription}</p>
+      <button className='button' onClick={handleClick}>{expanded ? 'show less' : 'show more'}</button>
+
+      {/* take div out if spacing is off */}
+      {expanded && (
+        <div>
+          <p className='link url'>{props.url}</p>
+          <p className='publisher'>{props.publisher}</p>
+          <p className='pub-date'>{props.publication_date}</p>
+          <p className='full-desc'>{props.expanded_description}</p>
+        </div>
+      )}
+    </div>
   )
 }
 
