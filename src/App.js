@@ -51,6 +51,23 @@ function Display(props) {
 
         <button className='button is-small is-rounded' onClick={handleClick}>{expanded ? '^ show less' : '⌄ show more'}</button>
 
+
+        {/* addind modal for expansion */}
+        {/* <div className="modal">
+          <div className="modal-background"></div>
+          <div className="modal-card">
+            <header className="modal-card-head">
+              <p className="modal-card-title">{props.author}</p>
+              <button className="delete" aria-label="close"></button>
+            </header>
+            <section className="modal-card-body">
+
+            </section>
+
+          </div>
+        </div> */}
+
+
         {/* take div out if spacing is off */}
         {expanded && (
           <div>
